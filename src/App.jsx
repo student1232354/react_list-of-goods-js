@@ -76,13 +76,15 @@ export const App = () => {
           Reverse
         </button>
 
-        <button
-          type="button"
-          className="button is-danger is-light"
-          onClick={() => setSortField('')}
-        >
-          Reset
-        </button>
+        {sortField && (
+          <button
+            type="button"
+            className="button is-danger is-light"
+            onClick={() => setSortField('')}
+          >
+            Reset
+          </button>
+        )}
       </div>
 
       <ul>
